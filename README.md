@@ -1,6 +1,6 @@
-# Stock Update App
+# Citi ICG Technology Software Development Job Simulation on Forage - April 2024
 
-Citi ICG Technology Software Development Job Simulation on Forage - April 2024
+
 
  * Completed a job simulation involving hypothetical tasks to improve Citi's
    loan management system and stock market risk reporting
