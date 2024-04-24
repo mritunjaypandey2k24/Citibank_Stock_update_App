@@ -6,9 +6,16 @@
  */
 
 plugins {
-    // Apply the application plugin to add support for building a CLI application in Java.
-    application
+        // Apply the application plugin to add support for building a CLI application in Java.
+        application
+        id("org.openjfx.javafxplugin") version "0.1.0"
+    
 }
+
+javafx {
+        version = "22.0.1"
+        modules = listOf("javafx.controls", "javafx.fxml")
+    }
 
 repositories {
     // Use Maven Central for resolving dependencies.
@@ -25,6 +32,10 @@ dependencies {
     implementation(libs.guava)
 
     implementation(group = "com.yahoofinance-api", name = "YahooFinanceAPI", version = "3.17.0")
+
+    implementation("org.openjfx:javafx-controls:17.0.2")
+    implementation("org.openjfx:javafx-fxml:17.0.2")
+    implementation("org.slf4j:slf4j-api:1.7.32")
 }
 
 // Apply a specific Java toolchain to ease working on different environments.
@@ -43,4 +54,3 @@ tasks.named<Test>("test") {
     // Use JUnit Platform for unit tests.
     useJUnitPlatform()
 }
-
